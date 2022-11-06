@@ -4,7 +4,7 @@ import {Card, CardMedia, CardContent, Typography} from '@mui/material'
 import styled from 'styled-components';
 import trimFullYear from '../utils/trimFullYear';
 
-const card = ({event, stdate, eddate, genre}) => {
+const EachCard = ({event, stdate, eddate, genre}) => {
     const {prfnm,poster,mt20id, prfstate}=event;
 
     return (
@@ -45,4 +45,4 @@ const TitleStyle=styled.div`
     font-weight:bold;
 `;
 
-export default card;
+export default EachCard;

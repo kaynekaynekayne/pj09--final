@@ -21,7 +21,7 @@ const Spinner=styled.div`
     border-radius:50%;
     border:0.4rem solid skyblue;
     border-top:0.4rem solid whitesmoke;
-    animation:spin 2s linear infinite;
+    animation:spin 0.5s linear infinite;
 
     @keyframes spin {
         0% {
