@@ -2,19 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {useUserContext} from '../context/userContext';
 import styled from 'styled-components';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const Header = () => {
-    const {user,setUser}=useUserContext();
+    const {user}=useUserContext();
 
     return (
         <HeaderStyle>
             <ul>
                 <li>
-                    <Link to="/" style={{color:'white', textDecoration:'none'}}>around</Link>
+                    <Link to="/">around</Link>
                 </li>
                 <li>
                     <Link to="/setting">
-                        <div>{user}</div>
+                        <AccountCircleIcon />
                     </Link>
                 </li>
             </ul>
@@ -26,7 +27,14 @@ const HeaderStyle=styled.header`
     width:100%;
     padding:0.8rem;
     background:rgb(54, 81, 254);
-    color:white;
+
+    ul{
+        display:flex;
+        justify-content: space-between;
+    }
+    li{
+        color:white;
+    }
 `;
 
 export default Header;
