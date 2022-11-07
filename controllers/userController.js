@@ -59,7 +59,7 @@ export const login=async(req,res)=>{
         sameSite:'none',
         secure:true,
     });
-    const {username}=user;
+    const {username}=user; //프사 바꿀거면 여기를 건드려야 됨
     return res.status(201).json({
         message:"성공적인 로그인",
         username,

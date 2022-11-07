@@ -23,7 +23,6 @@ const HeaderStyle=styled.header`
     width:100%;
     padding:0.8rem;
     background:rgb(54, 81, 254);
-    color:white;
     ul{
         display:flex;
         justify-content: space-between;
@@ -32,6 +31,9 @@ const HeaderStyle=styled.header`
     }
     a{
         text-decoration-line:none;
+    }
+    li{
+        color:white;
     }
 `;
 
