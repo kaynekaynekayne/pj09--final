@@ -42,10 +42,9 @@ const Searched = () => {
 
     return (
         <Container>
+            <Search />
             {loading ? <Loading />:(
                 noResult ? <div><SearchOffIcon color="disabled" fontSize="large"/><p>검색 결과가 없습니다</p></div> :
-                <>
-                    <Search />
                     <Grid container spacing={4} mb={5}> 
                         {searchedEvents.map((event)=>
                             <Grid item xs={12} sm={6} md={3} key={event.mt20id}>
@@ -53,7 +52,6 @@ const Searched = () => {
                             </Grid>
                         )}
                     </Grid>
-                </>
                 )
             }
         </Container>

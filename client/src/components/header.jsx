@@ -28,6 +28,8 @@ const HeaderStyle=styled.header`
         justify-content: space-between;
         align-items: center;
         margin-bottom:0;
+        list-style:none;
+
     }
     a{
         text-decoration-line:none;

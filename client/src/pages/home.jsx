@@ -28,9 +28,8 @@ const Home = () => {
 
     return (
         <Container>
+            <Search />
             {events.length===0 ? <Loading /> :
-            <>
-                <Search />
                 <Grid container spacing={4} mb={5}> 
                     {events.map((event)=>
                         <Grid item xs={12} sm={6} md={3} key={event.mt20id}>
@@ -38,7 +37,6 @@ const Home = () => {
                         </Grid>
                     )}
                 </Grid>
-            </>
             }
         </Container>
     );
