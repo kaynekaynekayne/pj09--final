@@ -5,6 +5,7 @@ import xmlConverter from '../utils/xmlConverter';
 import {Grid, Container} from '@mui/material'
 import Card from '../components/card';
 import Loading from '../components/loading';
+import Search from '../components/search';
 
 const Home = () => {
 
@@ -27,6 +28,7 @@ const Home = () => {
 
     return (
         <Container>
+            <Search />
             {events.length===0 ? <Loading /> :
             <Grid container spacing={4} mb={5}> 
                 {events.map((event)=>

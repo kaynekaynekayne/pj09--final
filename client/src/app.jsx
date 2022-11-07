@@ -1,6 +1,5 @@
 import {BrowserRouter as Router} from 'react-router-dom';
 import Header from './components/header';
-import Search from './components/search';
 import Footer from './components/footer';
 import Pages from './pages/pages';
 import styled from 'styled-components';
@@ -15,7 +14,6 @@ function App() {
           <MainStyle>
             <Header />
             <InnerStyle>
-              <Search />
               <Pages />
             </InnerStyle>
             <Footer/>

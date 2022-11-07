@@ -7,6 +7,7 @@ import {Grid, Container} from '@mui/material'
 import SearchOffIcon from '@mui/icons-material/SearchOff';
 import Card from '../components/card';
 import Loading from '../components/loading';
+import Search from '../components/search';
 
 const Searched = () => {
     const [searchedEvents, setSearchedEvents]=useState([]);
@@ -41,6 +42,7 @@ const Searched = () => {
 
     return (
         <Container>
+            <Search />
             {loading ? <Loading />:(
                 noResult ? <div><SearchOffIcon color="disabled" fontSize="large"/><p>검색 결과가 없습니다</p></div> :
                 <Grid container spacing={4} mb={5}> 

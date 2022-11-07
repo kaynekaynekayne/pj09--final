@@ -7,6 +7,7 @@ import {eventDetail, placeDetail} from '../api/kopis/kopis';
 import xmlConverter from '../utils/xmlConverter';
 import reformatDetailData from '../utils/reformatDetailData';
 import {Grid, Container} from '@mui/material'
+import Search from '../components/search';
 
 const Detail = () => {
     const params=useParams();
@@ -49,6 +50,7 @@ const Detail = () => {
     
     return (
         <Container>
+            <Search />
             <Grid container mb={5} spacing={5}>
                 <Grid item xs={12} sm={12} md={6}>
                     {!Object.values(location).some(x=>x===null) &&
