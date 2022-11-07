@@ -28,15 +28,17 @@ const Home = () => {
 
     return (
         <Container>
-            <Search />
             {events.length===0 ? <Loading /> :
-            <Grid container spacing={4} mb={5}> 
-                {events.map((event)=>
-                    <Grid item xs={12} sm={6} md={3} key={event.mt20id}>
-                        <Card event={event} genre={event.genrenm}/>
-                    </Grid>
-                )}
-            </Grid>
+            <>
+                <Search />
+                <Grid container spacing={4} mb={5}> 
+                    {events.map((event)=>
+                        <Grid item xs={12} sm={6} md={3} key={event.mt20id}>
+                            <Card event={event} genre={event.genrenm}/>
+                        </Grid>
+                    )}
+                </Grid>
+            </>
             }
         </Container>
     );
