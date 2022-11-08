@@ -16,34 +16,36 @@ const Detail = () => {
     const [details, setDetails]=useState({});
     const [location, setLocation]=useState({lat:null, lng:null, address:null});
 
-    const getDetails=async()=>{
-        try{
-            const response=await eventDetail(id);
-            const data=await xmlConverter(response);
-            const items=reformatDetailData(data);
-            setDetails(items);
-            return items.mt10id
-        }catch(err){
-            console.log(err.message);
-        }
-    };
-
-    const getPlaces=async(code)=>{
-        try{
-            const response=await placeDetail(code);
-            const data=await xmlConverter(response);
-            const items=reformatDetailData(data);
-            setLocation({
-                lat:parseFloat(items.la), 
-                lng:parseFloat(items.lo), 
-                address:items.adres
-            });
-        }catch(err){
-            console.log(err.message);
-        }
-    }
-
+    
     useEffect(()=>{
+
+        const getDetails=async()=>{
+            try{
+                const response=await eventDetail(id);
+                const data=await xmlConverter(response);
+                const items=reformatDetailData(data);
+                setDetails(items);
+                return items.mt10id
+            }catch(err){
+                console.log(err.message);
+            }
+        };
+
+        const getPlaces=async(code)=>{
+            try{
+                const response=await placeDetail(code);
+                const data=await xmlConverter(response);
+                const items=reformatDetailData(data);
+                setLocation({
+                    lat:parseFloat(items.la), 
+                    lng:parseFloat(items.lo), 
+                    address:items.adres
+                });
+            }catch(err){
+                console.log(err.message);
+            }
+        }
+
         getDetails()
         .then(placeCode=>getPlaces(placeCode));
     },[id]);

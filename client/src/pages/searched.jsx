@@ -17,26 +17,29 @@ const Searched = () => {
     const params=useParams();
     const {word}=params;
 
-    const getSearchingLists=async()=>{
-        try{
-            setLoading(true);
-            const response=await search(word);
-            const data=await xmlConverter(response);
-            if(data.length===0) {
-                setNoResult(true);
-                setLoading(false);
-            }else{
-                const items=reformatData(data);
-                setSearchedEvents(items);
-                setNoResult(false);
-                setLoading(false);
-            };
-        }catch(err){
-            console.log(err.message);
-        }
-    }
+
 
     useEffect(()=>{
+
+        const getSearchingLists=async()=>{
+            try{
+                setLoading(true);
+                const response=await search(word);
+                const data=await xmlConverter(response);
+                if(data.length===0) {
+                    setNoResult(true);
+                    setLoading(false);
+                }else{
+                    const items=reformatData(data);
+                    setSearchedEvents(items);
+                    setNoResult(false);
+                    setLoading(false);
+                };
+            }catch(err){
+                console.log(err.message);
+            }
+        }
+        
         getSearchingLists();
     },[word]);
 
