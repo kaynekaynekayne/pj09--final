@@ -47,5 +47,6 @@ const Pages = () => {
 const PageStyle=styled.div`
     display:flex;
     align-items:center;
+    min-height:80vh;
 `;
 export default Pages;

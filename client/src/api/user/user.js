@@ -66,3 +66,21 @@ export const isUserLoggedIn=async()=>{
         throw new Error("로그인을 하십시오");
     }
 };
+
+export const updateProfile=async({email, newNickname}={})=>{
+    try{
+        const {userInfo}={email, newNickname};
+        const response=await instance.put("/user/update",
+            userInfo,
+            {
+                headers:{
+                    Accept:'application/json',
+                    "Content-Type":"application/json",
+                }
+            }
+        );
+        return response;
+    }catch(err){
+        return err;
+    }
+}
