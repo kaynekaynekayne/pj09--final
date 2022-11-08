@@ -76,32 +76,5 @@ export const isUserLoggedIn=(req,res)=>{
     return res.status(200).json({
         message:"유저가 로그인 되어 있습니다",
         username,
-        email,
     })
 };
-
-export const updateProfile=async(req,res)=>{
-    const {newNickname, email}=req.body;
-    const user=await User.findOne({email});
-
-    const usernameExists=await User.findOne({username:newNickname});
-
-    if(usernameExists){
-        return res.status(400).json({message:"이미 사용중인 닉네임입니다"})
-    }
-
-    if(user){
-        const {username}=user;
-        await User.findByIdAndUpdate(
-            user._id,
-            {username:newNickname},
-            {new:true}
-        )
-        return res.status(200).json({message:"성공적으로 변경되었습니다"})
-    }
-    // try{
-        
-    // }catch(err){
-
-    // }
-}

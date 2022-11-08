@@ -9,13 +9,11 @@ export const UserContextProvider=({children})=>{
     const localUser=localStorage.getItem("user");
     
     const [user,setUser]=useState(localUser);
-    const [email, setEmail]=useState("");
 
     useEffect(()=>{
         const unsubscribe=isUserLoggedIn()
         .then(resp=>{
             setUser(resp.username);
-            setEmail(resp.email);
         })
         .catch(err=> {
             localStorage.removeItem("user");
@@ -34,7 +32,7 @@ export const UserContextProvider=({children})=>{
     },[]);
     
     return(
-        <userContext.Provider value={{user, setUser, email, setEmail}}>
+        <userContext.Provider value={{user, setUser}}>
             {children}
         </userContext.Provider>
     )

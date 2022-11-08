@@ -7,7 +7,6 @@ import Login from './login';
 import Signup from './signup';
 import styled from 'styled-components';
 import { useUserContext } from '../context/userContext';
-import Setting from './setting';
 
 const Pages = () => {
     const {user}=useUserContext();
@@ -34,10 +33,6 @@ const Pages = () => {
                 <Route 
                     path="/detail/:id" 
                     element={user ? <Detail /> : <Navigate to="/login" />}
-                />
-                <Route 
-                    path="/setting"
-                    element={user ? <Setting /> : <Navigate to="/login" />}
                 />
             </Routes>
         </PageStyle>
