@@ -6,11 +6,9 @@ const Header = () => {
 
     return (
         <HeaderStyle>
-            <ul>
-                <Link to="/">
-                    <li>around</li>
-                </Link>
-            </ul>
+            <Link to="/">
+                <span>around</span>
+            </Link>
         </HeaderStyle>
     );
 };
@@ -19,20 +17,13 @@ const HeaderStyle=styled.header`
     width:100%;
     padding:0.8rem;
     background:rgb(54, 81, 254);
-    ul{
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom:0;
-        list-style:none;
+
+    span{
+        color:white;
     }
     a{
         text-decoration-line:none;
     }
-    li{
-        color:white;
-    }
-
 `;
 
 export default Header;
