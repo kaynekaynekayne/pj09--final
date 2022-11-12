@@ -32,16 +32,25 @@
   
 ![home](https://user-images.githubusercontent.com/96046698/201461783-eeebb888-881c-4fea-8a51-610eb5681952.png)  
 
-**2) 검색**  
+**2) 회원가입**  
+  
+![signup](https://user-images.githubusercontent.com/96046698/201462180-6957d854-357d-47d5-98e1-d949e84fbdae.png)  
+
+**3) 로그인**  
+  
+![login](https://user-images.githubusercontent.com/96046698/201462183-98363fb2-5386-42d3-b75b-ba140dfc8a63.png)  
+
+**4) 검색**  
   
 ![searching](https://user-images.githubusercontent.com/96046698/201461990-db71fc73-0d67-401e-8eed-53448c8196c2.png)  
 
-**3) 상세 페이지**  
+**5) 상세 페이지**  
   
 ![searched](https://user-images.githubusercontent.com/96046698/201462041-705f363a-0f8d-40b3-aa7e-4e58877cdfb3.png)  
 
   
-**4) **  
+**6) 공연 상세 정보**  
   
+![info](https://user-images.githubusercontent.com/96046698/201461788-e1b56439-dab5-46e7-b198-a664939657e6.png)  
  
 
