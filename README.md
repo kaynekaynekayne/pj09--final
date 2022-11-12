@@ -29,13 +29,18 @@
 
 ## 미리보기
 **1) 홈 화면**  
+  
 ![home](https://user-images.githubusercontent.com/96046698/201461783-eeebb888-881c-4fea-8a51-610eb5681952.png)  
 
 **2) 검색**  
+  
 ![searching](https://user-images.githubusercontent.com/96046698/201461990-db71fc73-0d67-401e-8eed-53448c8196c2.png)  
 
 **3) 상세 페이지**  
+  
 ![searched](https://user-images.githubusercontent.com/96046698/201462041-705f363a-0f8d-40b3-aa7e-4e58877cdfb3.png)  
 
 **4) **  
+  
+ 
 
