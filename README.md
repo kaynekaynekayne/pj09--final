@@ -54,7 +54,7 @@
 ![info](https://user-images.githubusercontent.com/96046698/201461788-e1b56439-dab5-46e7-b198-a664939657e6.png)  
  
 
-**7) 공연장까지 길찾기**
+**7) 공연장까지 길찾기**  
 ![map](https://user-images.githubusercontent.com/96046698/201461789-61f176ce-837e-4aff-b2a8-0c9a5c10fe3e.png)  
 
 
