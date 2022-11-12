@@ -34,11 +34,11 @@
 
 ### 회원가입  
   
-![signup](https://user-images.githubusercontent.com/96046698/201462180-6957d854-357d-47d5-98e1-d949e84fbdae.png)  
+![signup](https://user-images.githubusercontent.com/96046698/201462863-ba2ca4ea-8f2e-4815-b3db-ba17735fe2ba.png)  
 
 ### 로그인  
   
-![login](https://user-images.githubusercontent.com/96046698/201462183-98363fb2-5386-42d3-b75b-ba140dfc8a63.png)  
+![login](https://user-images.githubusercontent.com/96046698/201462861-bea2f126-82dc-4b8d-b1a4-ac9776bdccda.png)  
 
 ### 검색  
   
