@@ -58,11 +58,9 @@
 ![map](https://user-images.githubusercontent.com/96046698/201461789-61f176ce-837e-4aff-b2a8-0c9a5c10fe3e.png)  
 
 
-**8) 모바일 홈화면**
+**8) 모바일 홈화면**  
 ![mobile-home](https://user-images.githubusercontent.com/96046698/201461791-8045ff83-da81-4e30-835d-446710c9c3a1.png)  
 
-**9) 모바일 공연 상세 정보**  
+**9) 모바일 상세 페이지**  
 ![mobile-info](https://user-images.githubusercontent.com/96046698/201461792-b44f5763-4434-4aad-bbb8-e36eb60c49f2.png)  
-
-**10) 모바일 공연장까지 길찾기**  
 ![mobile-map](https://user-images.githubusercontent.com/96046698/201461793-45fe2b41-563d-4152-b9d4-f7c81eb4b361.png)  
