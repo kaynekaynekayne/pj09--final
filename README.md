@@ -28,3 +28,8 @@
 
 
 ## 미리보기
+1. 홈
+![home](https://user-images.githubusercontent.com/96046698/201461783-eeebb888-881c-4fea-8a51-610eb5681952.png)
+
+2. 
+
