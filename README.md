@@ -7,8 +7,8 @@
 - 로그인  
 - 회원가입  
 - 검색  
-- 국가 공공 데이터 포털의 [외교부 국가·지역별 현지연락처 openAPI](https://www.data.go.kr/data/15076242/openapi.do)를 이용한 데이터 출력
-- 유저리스트 페이지에 국가별 현지 연락처 저장 (로그인 했을 시)  
+- [공연 예술 통합전산망의 openAPI](https://www.kopis.or.kr/por/cs/openapi/openApiInfo.do?menuId=MNU_00074)를 이용한 데이터 출력
+- Google Map API를 이용한 지도 출력
 
 ## 기술
 #### 프론트엔드
