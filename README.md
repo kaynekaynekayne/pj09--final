@@ -7,7 +7,7 @@
 - 로그인  
 - 회원가입  
 - 검색  
-- [공연 예술 통합전산망의 openAPI](https://www.kopis.or.kr/por/cs/openapi/openApiInfo.do?menuId=MNU_00074)를 이용한 데이터 출력
+- [공연 예술 통합전산망의 openAPI](https://www.kopis.or.kr/por/cs/openapi/openApiInfo.do?menuId=MNU_00074)를 이용한 전국의 공연 목록 출력
 - Google Map API를 이용한 지도 출력
 
 ## 기술
