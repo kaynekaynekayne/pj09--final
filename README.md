@@ -7,8 +7,10 @@
 - 로그인  
 - 회원가입  
 - 검색  
-- [공연 예술 통합전산망의 openAPI](https://www.kopis.or.kr/por/cs/openapi/openApiInfo.do?menuId=MNU_00074)를 이용한 전국의 공연 목록 출력
-- Google Map API를 이용한 지도 출력
+- 공연 목록 출력  
+- 공연의 상세 정보 출력  
+- 지도 출력  
+- 길찾기  
 
 ## 기술
 #### 프론트엔드
@@ -23,6 +25,12 @@
 
 #### 배포
 - heroku  
+
+## 개요  
+- [공연 예술 통합전산망의 openAPI](https://www.kopis.or.kr/por/cs/openapi/openApiInfo.do?menuId=MNU_00074)를 이용하여 전국의 공연 정보를 받아왔습니다.  
+- 구글맵 API를 이용하여 공연장의 위치, 출발지로부터 공연장까지의 거리, 걸리는 시간, 대중 교통 등이 화면에 간단하게 출력되도록 구현하였습니다.  
+- Node.js+express로 서버를 구축하였습니다.  
+- MongoDB를 통해 로그인 · 회원가입이 가능합니다.  
 
 ## 미리보기
 ### 홈 화면  
