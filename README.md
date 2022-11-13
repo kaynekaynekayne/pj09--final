@@ -51,11 +51,11 @@
   
 ### 공연 상세 정보  
   
-![info](https://user-images.githubusercontent.com/96046698/201461788-e1b56439-dab5-46e7-b198-a664939657e6.png)  
+![detail-info](https://user-images.githubusercontent.com/96046698/201513397-c4916121-1cb4-4191-a5e1-bd5874623a7b.gif)  
  
 
 ### 공연장까지 길찾기  
-![map](https://user-images.githubusercontent.com/96046698/201461789-61f176ce-837e-4aff-b2a8-0c9a5c10fe3e.png)  
+![detail-map2](https://user-images.githubusercontent.com/96046698/201513401-51990fc1-f7d8-455f-bc6f-098ab9bb0f86.gif)  
 
 
 ### 모바일 홈화면  
