@@ -56,11 +56,3 @@
 
 ### 공연장까지 길찾기  
 ![detail-map2](https://user-images.githubusercontent.com/96046698/201513401-51990fc1-f7d8-455f-bc6f-098ab9bb0f86.gif)  
-
-
-### 모바일 홈화면  
-![mobile-home](https://user-images.githubusercontent.com/96046698/201461791-8045ff83-da81-4e30-835d-446710c9c3a1.png)  
-
-### 모바일 상세 페이지  
-![mobile-info](https://user-images.githubusercontent.com/96046698/201461792-b44f5763-4434-4aad-bbb8-e36eb60c49f2.png)  
-![mobile-map](https://user-images.githubusercontent.com/96046698/201461793-45fe2b41-563d-4152-b9d4-f7c81eb4b361.png)  
