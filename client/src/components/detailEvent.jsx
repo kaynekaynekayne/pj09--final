@@ -2,8 +2,8 @@ import React,{useState} from 'react'
 import { CardActions, Collapse, IconButton } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import trimFullYear from '../utils/trimFullYear';
-import styled from 'styled-components';
 import Loading from './loading';
+import styled from 'styled-components';
 
 
 const DetailEvent = ({details}) => {
@@ -40,35 +40,35 @@ const DetailEvent = ({details}) => {
                     </IconButton>
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
-                    <div>
-                        <div className="info-container">
-                            <span><strong>장르</strong></span>
+                    <div className='info-container'>
+                        <div>
+                            <h6>장르</h6>
                             <span>{genrenm}</span>
                         </div>
-                        <div className="info-container">
-                            <span><strong>공연기간</strong></span>
+                        <div>
+                            <h6>공연기간</h6>
                             <span>
                                 {trimFullYear(prfpdfrom)}-{trimFullYear(prfpdto)} ({prfstate})
                             </span>
                         </div>
-                        <div className="info-container">
-                            <span><strong>공연시간</strong></span>
+                        <div>
+                            <h6>공연시간</h6>
                             <span>{prfruntime}</span>
                         </div>
-                        <div className="info-container">
-                            <span><strong>등급</strong></span>
+                        <div>
+                            <h6>등급</h6>
                             <span>{prfage}</span>
                         </div>
-                        <div className="info-container">
-                            <span><strong>배우</strong></span>
+                        <div>
+                            <h6>배우</h6>
                             <span>{prfcast}</span>
                         </div>
-                        <div className='info-container'>
-                            <span><strong>가격</strong></span>
+                        <div>
+                            <h6>가격</h6>
                             <span>{pcseguidance}</span>
                         </div>
-                        <div className='info-container'>
-                            <span><strong>기대평</strong></span>
+                        <div>
+                            <h6>기대평</h6>
                             <input />
                         </div>
                     </div>
@@ -82,12 +82,15 @@ const DetailEvent = ({details}) => {
 const Section=styled.section`
 
     .box{
-        padding:1rem;
+        padding:1.5rem;
         border:1px solid lightgray;
         border-radius:0.8rem;
         img{
             max-height:28rem;
             object-fit:contain;
+        }
+        h4{
+            font-weight: bold;
         }
         h6{
             margin-bottom:1rem;
@@ -95,9 +98,15 @@ const Section=styled.section`
     }
 
     .info-container{
-        margin-bottom:1rem;
-        display:flex;
-        justify-content:space-between;
+        div{
+            margin-bottom:1rem;
+            display:flex;
+            justify-content:space-between;
+        }
+        h6{
+            font-weight:bold; 
+            margin-bottom:0;
+        }
         input{width:80%}
     }
 `;
