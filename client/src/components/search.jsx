@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
-import {Box, Input, InputAdornment} from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
+import styled from 'styled-components';
 
 const Search = () => {
     const navigate=useNavigate();
@@ -14,25 +13,34 @@ const Search = () => {
         setTerm("");
     }
 
-    return <Box
-                component="form"
-                mt={4}
-                mb={6}
-                onSubmit={submitHandler}>
-            <div>
-                <Input
-                    required
-                    placeholder="공연을 검색하세요"
+    return (
+        <Box>
+            <form onSubmit={submitHandler}>
+                <input 
+                    placeholder="공연을 검색하세요 🔍"
                     value={term}
                     onChange={(e)=>setTerm(e.target.value)}
-                    endAdornment={
-                        <InputAdornment position="start">
-                            <SearchIcon />
-                        </InputAdornment>
-                    }
+                    required
                 />
-            </div>
-        </Box>;
+                <div></div>
+            </form>
+        </Box>
+    )
 };
 
+const Box=styled.div`
+    margin:2.7rem;
+    input{
+        border:none;
+        padding:0.2rem;
+        &:focus{
+            outline:none;
+        }
+    }
+    div{
+        width:12rem;
+        margin:0 auto;
+        border-bottom: 1px solid lightgrey;
+    }
+`;
 export default Search;

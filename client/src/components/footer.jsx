@@ -1,5 +1,4 @@
 import React from 'react';
-import {Button} from '@mui/material';
 import Swal from 'sweetalert2'
 import {logout} from '../api/user/user';
 import { useNavigate } from 'react-router-dom';
@@ -37,11 +36,7 @@ const Footer = () => {
     return (
         <FooterStyle>
             {user && 
-                <Button
-                    onClick={handleLogout}
-                    variant="contained"
-                    size="large"
-                >로그아웃</Button>
+                <button onClick={handleLogout}>로그아웃</button>
             }
         </FooterStyle>
     );
@@ -51,6 +46,16 @@ const FooterStyle=styled.footer`
     background-color:rgb(54, 81, 254);
     width:100%;
     height:42.25px;
+
+    button{
+        height:100%;
+        color:white;
+        background-color:rgb(43, 63, 195);
+        padding:0.5rem;
+        border-radius:0.5rem;
+        cursor:pointer;
+        border:none;
+    }
 `;  
 
 export default Footer;

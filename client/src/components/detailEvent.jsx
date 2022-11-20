@@ -1,13 +1,5 @@
 import React,{useState} from 'react'
-import {
-    Typography, 
-    Card, 
-    CardHeader, 
-    CardMedia,
-    CardContent, 
-    CardActions,
-    Collapse,
-    IconButton, } from '@mui/material';
+import { CardActions, Collapse, IconButton } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import trimFullYear from '../utils/trimFullYear';
 import styled from 'styled-components';
@@ -32,69 +24,82 @@ const DetailEvent = ({details}) => {
     }=details;
 
     const handleExpand=()=>setExpanded(prev=>!prev);
-    const titleTypo=(field)=>{
-        return <Typography variant="subtitle2"><strong>{field}</strong></Typography>
-    };
 
     return (
-        <section>
+        <Section>
             {Object.keys(details).length===0 ? <Loading /> :
-            <Card>
-                <CardHeader 
-                    title={prfnm}
-                    subheader={fcltynm}
-                />
-                <CardMedia 
-                    component="img"
-                    src={poster}
-                    alt="poster"
-                    sx={{ maxHeight: '28rem', objectFit:'contain',}}
-                />
+            <div className='box'>
+                <h4>{prfnm}</h4>
+                <h6>{fcltynm}</h6>
+                <div>
+                    <img src={poster} alt="main poster"/>
+                </div>
                 <CardActions >
                     <IconButton aria-label="more information" onClick={handleExpand}>
                         <ExpandMoreIcon/>
                     </IconButton>
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
-                    <CardContent>
-                        <TextContainer>
-                            {titleTypo("장르")}
-                            <Typography variant="subtitle2">{genrenm}</Typography>
-                        </TextContainer>
-                        <TextContainer>
-                            {titleTypo("공연기간")}
-                            <Typography variant="subtitle2" color={prfstate==="공연완료" ? "text.disabled" : "text.primary"}>
+                    <div>
+                        <div className="info-container">
+                            <span><strong>장르</strong></span>
+                            <span>{genrenm}</span>
+                        </div>
+                        <div className="info-container">
+                            <span><strong>공연기간</strong></span>
+                            <span>
                                 {trimFullYear(prfpdfrom)}-{trimFullYear(prfpdto)} ({prfstate})
-                            </Typography>
-                        </TextContainer>
-                        <TextContainer>
-                            {titleTypo("공연시간")}
-                            <Typography variant="subtitle2">{prfruntime}</Typography>
-                        </TextContainer>
-                        <TextContainer>
-                            {titleTypo("등급")}
-                            <Typography variant="subtitle2">{prfage}</Typography>
-                        </TextContainer>
-                        <TextContainer>
-                            {titleTypo("배우")}
-                            <Typography variant="subtitle2">{prfcast}</Typography>
-                        </TextContainer>
-                        <TextContainer>
-                            {titleTypo("가격")}
-                            <Typography variant="subtitle2">{pcseguidance}</Typography>
-                        </TextContainer>
-                    </CardContent>
+                            </span>
+                        </div>
+                        <div className="info-container">
+                            <span><strong>공연시간</strong></span>
+                            <span>{prfruntime}</span>
+                        </div>
+                        <div className="info-container">
+                            <span><strong>등급</strong></span>
+                            <span>{prfage}</span>
+                        </div>
+                        <div className="info-container">
+                            <span><strong>배우</strong></span>
+                            <span>{prfcast}</span>
+                        </div>
+                        <div className='info-container'>
+                            <span><strong>가격</strong></span>
+                            <span>{pcseguidance}</span>
+                        </div>
+                        <div className='info-container'>
+                            <span><strong>기대평</strong></span>
+                            <input />
+                        </div>
+                    </div>
                 </Collapse>
-            </Card>
+            </div>
             }
-        </section>
+        </Section>
     )
 }
 
-const TextContainer=styled.div`
-    margin-bottom:1rem;
-    display:flex;
-    justify-content:space-between;
+const Section=styled.section`
+
+    .box{
+        padding:1rem;
+        border:1px solid lightgray;
+        border-radius:0.8rem;
+        img{
+            max-height:28rem;
+            object-fit:contain;
+        }
+        h6{
+            margin-bottom:1rem;
+        }
+    }
+
+    .info-container{
+        margin-bottom:1rem;
+        display:flex;
+        justify-content:space-between;
+        input{width:80%}
+    }
 `;
 
 export default DetailEvent;

@@ -12,6 +12,5 @@ export const GlobalStyles=createGlobalStyle`
         text-decoration: none;
         color:inherit;
         list-style:none;
-        
     }
 `;
