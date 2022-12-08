@@ -1,11 +1,15 @@
 import React,{useState} from 'react';
-import {Button, TextField, FormControl, InputLabel, Input, IconButton, InputAdornment} from '@mui/material';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import Swal from 'sweetalert2';
 import { Link, useNavigate } from 'react-router-dom';
 import {login} from '../api/user/user';
 import { useUserContext } from '../context/userContext';
+import Button from '../components/button';
+//css
+import {TextField, FormControl, InputLabel, Input, IconButton, InputAdornment} from '@mui/material';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import Swal from 'sweetalert2';
+import styled from 'styled-components';
+
 
 const Login = () => {
     const navigate=useNavigate();
@@ -50,59 +54,63 @@ const Login = () => {
     };
 
     return (
-        <div className="container mt-5 mb-5 col-6 justify-content-center align-items-center text-center">
-            <div className="form-group">
-                <TextField
-                    size="small"
-                    variant="standard"
-                    className='form-control'
-                    label="이메일"
-                    value={email}
-                    onChange={(e)=>setEmail(e.target.value)}
+        <Container>
+            <TextField
+                variant="standard"
+                className='form-control'
+                label="이메일"
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)}
+            />
+            <FormControl 
+                className="form-control" 
+                variant="standard">
+                <InputLabel>비밀번호</InputLabel>
+                <Input 
+                    label="비밀번호"
+                    type={showPassword ? "text" : "password"}
+                    value={password}
+                    onChange={(e)=>setPassword(e.target.value)}
+                    endAdornment={
+                    <InputAdornment position="start">
+                        <IconButton 
+                            edge="end"
+                            onClick={()=>setShowPassword(prev=>!prev)}
+                        >
+                            {showPassword ?
+                                <VisibilityIcon />
+                            :
+                                <VisibilityOffIcon />
+                            }
+                        </IconButton>
+                    </InputAdornment>
+                    }
                 />
+            </FormControl>
+            <div className='box'>
+                <Button name="로그인" onClick={handleLogin}/>
             </div>
-            <div className="form-group">
-                <FormControl 
-                    size='small'
-                    className="form-control" 
-                    variant="standard">
-                    <InputLabel>비밀번호</InputLabel>
-                    <Input 
-                        label="비밀번호"
-                        type={showPassword ? "text" : "password"}
-                        value={password}
-                        onChange={(e)=>setPassword(e.target.value)}
-                        endAdornment={
-                        <InputAdornment position="start">
-                            <IconButton 
-                                edge="end"
-                                onClick={()=>setShowPassword(prev=>!prev)}
-                            >
-                                {showPassword ?
-                                    <VisibilityIcon />
-                                :
-                                    <VisibilityOffIcon />
-                                }
-                            </IconButton>
-                        </InputAdornment>
-                        }
-                    />
-                </FormControl>
-            </div>
-            <div className="text-center mt-4">
-                <Button
-                    onClick={handleLogin}
-                    variant="outlined"
-                >로그인</Button>
-            </div>
-            <div className='mt-5 mb-5'>
+            <div className='box'>
                 <span>계정이 없으십니까? </span>
                 <Link to="/signup">            
                     <span>회원가입</span>
                 </Link>
             </div>
-        </div>
+        </Container>
     );
 };
+
+const Container=styled.div`
+    width:100%;
+    min-height:80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding:0 30%;
+
+    .box{
+        margin-top:2rem;
+    }
+`;
 
 export default Login;

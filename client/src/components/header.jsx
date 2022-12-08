@@ -15,8 +15,8 @@ const Header = () => {
 
 const HeaderStyle=styled.header`
     width:100%;
-    padding:0.8rem;
-    background:rgb(54, 81, 254);
+    padding:0.7rem;
+    background-color: ${(props) => props.theme.primaryColor};
 
     span{
         color:white;

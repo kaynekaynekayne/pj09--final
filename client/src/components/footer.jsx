@@ -4,6 +4,7 @@ import {logout} from '../api/user/user';
 import { useNavigate } from 'react-router-dom';
 import {useUserContext} from '../context/userContext';
 import styled from 'styled-components'; 
+import Button from './button';
 
 const Footer = () => {
     const navigate=useNavigate();
@@ -36,26 +37,16 @@ const Footer = () => {
     return (
         <FooterStyle>
             {user && 
-                <button onClick={handleLogout}>로그아웃</button>
+                <Button name="로그아웃" onClick={handleLogout}/>
             }
         </FooterStyle>
     );
 };
 
 const FooterStyle=styled.footer`
-    background-color:rgb(54, 81, 254);
+    background-color: ${(props) => props.theme.primaryColor};
     width:100%;
-    height:42.25px;
-
-    button{
-        height:100%;
-        color:white;
-        background-color:rgb(43, 63, 195);
-        padding:0.5rem;
-        border-radius:0.5rem;
-        cursor:pointer;
-        border:none;
-    }
+    height:46.4px;
 `;  
 
 export default Footer;
