@@ -15,8 +15,9 @@
 ## 기술
 #### 프론트엔드
 - React  
-- Material-UI  
 - Styled-Components  
+- Material-UI  
+
 
 #### 백엔드
 - Node.js  
