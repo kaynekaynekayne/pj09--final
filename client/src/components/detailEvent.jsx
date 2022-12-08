@@ -80,6 +80,8 @@ const DetailEvent = ({details}) => {
 }
 
 const Section=styled.section`
+    flex-basis: 50%;
+    margin:1.5rem;
 
     .box{
         padding:1.5rem;

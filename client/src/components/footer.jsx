@@ -18,7 +18,7 @@ const Footer = () => {
                 showConfirmButton: false,
                 timer: 1500
             })
-            localStorage.removeItem("user");
+            localStorage.removeItem("ar-user");
             setUser(null);
             navigate("/login");
         } else{

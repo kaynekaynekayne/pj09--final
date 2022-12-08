@@ -57,7 +57,7 @@ export const isUserLoggedIn=async()=>{
             {
                 withCredentials:true,
                 headers:{
-                    "Authorization":"Bearer "+localStorage.getItem("user")
+                    "Authorization":"Bearer "+localStorage.getItem("ar-user")
                 }
             },
         )

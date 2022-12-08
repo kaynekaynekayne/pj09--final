@@ -6,8 +6,9 @@ import {useParams} from 'react-router-dom';
 import {eventDetail, placeDetail} from '../api/kopis/kopis';
 import xmlConverter from '../utils/xmlConverter';
 import reformatDetailData from '../utils/reformatDetailData';
-import {Grid, Container} from '@mui/material'
 import Search from '../components/search';
+import styled from 'styled-components';
+
 
 const Detail = () => {
     const params=useParams();
@@ -18,7 +19,6 @@ const Detail = () => {
 
     
     useEffect(()=>{
-
         const getDetails=async()=>{
             try{
                 const response=await eventDetail(id);
@@ -51,20 +51,25 @@ const Detail = () => {
     },[id]);
     
     return (
-        <Container>
+        <div>
             <Search />
-            <Grid container mb={5} spacing={5}>
-                <Grid item xs={12} sm={12} md={6}>
-                    {!Object.values(location).some(x=>x===null) &&
-                        <DetailMap location={location}/>
-                    }
-                </Grid>
-                <Grid item xs={12} sm={12} md={6} mb={4}>
-                    <DetailEvent details={details}/>
-                </Grid>
-            </Grid>
-        </Container>
+            <Box>
+                <DetailEvent details={details}/>
+                {!Object.values(location).some(x=>x===null) &&
+                    <DetailMap location={location}/>
+                }
+            </Box>
+        </div>
     )
 }
+
+const Box=styled.div`
+    display: flex;
+    flex: 1;
+
+    @media screen and (max-width:768px){
+        flex-direction: column;
+    }
+`;
 
 export default Detail;

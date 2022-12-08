@@ -2,10 +2,10 @@ import React, {useEffect, useState} from 'react';
 import {mainEvents} from '../api/kopis/kopis';
 import reformatData from '../utils/reformatData';
 import xmlConverter from '../utils/xmlConverter';
-import {Grid, Container} from '@mui/material'
 import Card from '../components/card';
 import Loading from '../components/loading';
 import Search from '../components/search';
+import styled from 'styled-components';
 
 const Home = () => {
 
@@ -27,19 +27,24 @@ const Home = () => {
     }
 
     return (
-        <Container>
+        <div>
             <Search />
             {events.length===0 ? <Loading /> :
-                <Grid container spacing={4} mb={5}> 
-                    {events.map((event)=>
-                        <Grid item xs={12} sm={6} md={3} key={event.mt20id}>
-                            <Card event={event} genre={event.genrenm}/>
-                        </Grid>
+                <CardContainer>
+                    {events.map(event=>
+                        <Card key={event.mt20id} event={event} genre={event.genrenm}/>
                     )}
-                </Grid>
+                </CardContainer>
             }
-        </Container>
+        </div>
     );
 };
+
+const CardContainer=styled.div`
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+    grid-gap:2rem;
+    margin:2rem;
+`;
 
 export default Home;

@@ -26,7 +26,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                localStorage.setItem("user",JSON.stringify(resp.username));
+                localStorage.setItem("ar-user",JSON.stringify(resp.username));
                 setUser(resp.username);
                 navigate("/");
             } else{

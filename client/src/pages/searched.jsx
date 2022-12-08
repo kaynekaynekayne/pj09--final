@@ -3,11 +3,10 @@ import { useParams } from 'react-router-dom';
 import { search } from '../api/kopis/kopis';
 import reformatData from '../utils/reformatData';
 import xmlConverter from '../utils/xmlConverter';
-import {Grid, Container} from '@mui/material'
-import SearchOffIcon from '@mui/icons-material/SearchOff';
 import Card from '../components/card';
 import Loading from '../components/loading';
 import Search from '../components/search';
+import styled from 'styled-components';
 
 const Searched = () => {
     const [searchedEvents, setSearchedEvents]=useState([]);
@@ -18,9 +17,7 @@ const Searched = () => {
     const {word}=params;
 
 
-
     useEffect(()=>{
-
         const getSearchingLists=async()=>{
             try{
                 setLoading(true);
@@ -44,21 +41,26 @@ const Searched = () => {
     },[word]);
 
     return (
-        <Container>
+        <div>
             <Search />
             {loading ? <Loading />:(
-                noResult ? <div><SearchOffIcon color="disabled" fontSize="large"/><p>검색 결과가 없습니다</p></div> :
-                    <Grid container spacing={4} mb={5}> 
-                        {searchedEvents.map((event)=>
-                            <Grid item xs={12} sm={6} md={3} key={event.mt20id}>
-                                <Card event={event} stdate={event.prfpdto} eddate={event.prfpdto}/>
-                            </Grid>
+                noResult ? <h5>검색 결과가 없습니다</h5> :
+                    <CardContainer>
+                        {searchedEvents.map(event=>
+                            <Card key={event.mt20id} event={event} stdate={event.prfpdto} eddate={event.prfpdto}/>    
                         )}
-                    </Grid>
+                    </CardContainer>
                 )
             }
-        </Container>
+        </div>
     )
 }
+
+const CardContainer=styled.div`
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+    grid-gap:2rem;
+    margin:2rem;
+`;
 
 export default Searched;

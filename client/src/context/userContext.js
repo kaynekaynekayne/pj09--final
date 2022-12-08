@@ -6,7 +6,7 @@ export const userContext=createContext(null);
 
 export const UserContextProvider=({children})=>{
     
-    const localUser=localStorage.getItem("user");
+    const localUser=localStorage.getItem("ar-user");
     
     const [user,setUser]=useState(localUser);
 
@@ -16,7 +16,7 @@ export const UserContextProvider=({children})=>{
             setUser(resp.username);
         })
         .catch(err=> {
-            localStorage.removeItem("user");
+            localStorage.removeItem("ar-user");
             setUser(null);
             Swal.fire({
                 icon: 'warning',

@@ -71,12 +71,13 @@ const DetailMap = ({location}) => {
     };
 
     return (
-        <section>
+        <Container>
             {isLoaded ? (
             <>
                 <div>
                     <Autocomplete>
-                        <Input 
+                        <input
+                            className="input" 
                             placeholder="출발지"
                             type="text"
                             onChange={(e)=>setOrigin(e.target.value)}
@@ -84,14 +85,15 @@ const DetailMap = ({location}) => {
                         />
                     </Autocomplete>
                     <Autocomplete>
-                        <Input
+                        <input
+                            className="input"
                             placeholder="목적지"
                             type="text"
                             onChange={(e)=>setDestination(e.target.value)}
                             value={destination}
                         />
                     </Autocomplete>
-                    <MapIconBox>
+                    <div className="iconbox">
                         <div>
                             <IconButton aria-label="reverse" onClick={onToggleClick}>
                                 <ImportExportIcon/>
@@ -106,7 +108,7 @@ const DetailMap = ({location}) => {
                         <IconButton aria-label="center" onClick={()=>map.panTo({lat,lng})}>
                             <ReplayTwoToneIcon />
                         </IconButton>
-                    </MapIconBox>
+                    </div>
                     <div style={{padding:'0.4rem'}}>
                         {distance && duration && <>
                             <span>(거리) <strong>{distance} </strong></span>
@@ -132,19 +134,26 @@ const DetailMap = ({location}) => {
             </>
             ):<Loading />
             }
-        </section>
+        </Container>
     )
 };
 
-const Input=styled.input`
-    width:100%;
-    padding:0.5rem;
-    outline:0;
-    margin-bottom:0.5rem;
+
+const Container=styled.div`
+    flex-basis: 50%;
+    margin:1.5rem;
+
+    .input{
+        width:100%;
+        padding:0.5rem;
+        outline:0;
+        margin-bottom:0.5rem;
+    }
+
+    .iconbox{
+        display:flex;
+        justify-content:space-between;
+    }
 `;
 
-const MapIconBox=styled.div`
-    display:flex;
-    justify-content:space-between;
-`;
 export default DetailMap;
