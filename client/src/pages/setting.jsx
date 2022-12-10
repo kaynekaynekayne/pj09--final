@@ -7,6 +7,8 @@ const Setting = () => {
     const {user, userEmail}=useUserContext();
     const [newNickname, setNewNickname]=useState(user);
 
+    console.log(userEmail);
+    
     const handleUpdate=async()=>{
         const resp=await updateProfile({userEmail, newNickname});
         if(resp.statusText==="OK"){

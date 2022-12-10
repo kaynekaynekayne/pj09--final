@@ -8,7 +8,7 @@ import Button from './button';
 
 const Footer = () => {
     const navigate=useNavigate();
-    const {user,setUser}=useUserContext();
+    const {user,setUser,setUserEmail}=useUserContext();
 
     const handleLogout=async()=>{
         const resp=await logout();
@@ -21,6 +21,7 @@ const Footer = () => {
             })
             localStorage.removeItem("ar-user");
             setUser(null);
+            setUserEmail(null);
             navigate("/login");
         } else{
             console.log(resp);

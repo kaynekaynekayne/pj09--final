@@ -16,10 +16,12 @@ export const UserContextProvider=({children})=>{
         const unsubscribe=isUserLoggedIn()
         .then(resp=>{
             setUser(resp.username);
+            setUserEmail(resp.email);
         })
         .catch(err=> {
             localStorage.removeItem("ar-user");
             setUser(null);
+            setUserEmail(null);
             Swal.fire({
                 icon: 'warning',
                 text: err.message,
@@ -34,7 +36,7 @@ export const UserContextProvider=({children})=>{
     },[]);
     
     return(
-        <userContext.Provider value={{user, setUser, userEmail}}>
+        <userContext.Provider value={{user, setUser, userEmail, setUserEmail}}>
             {children}
         </userContext.Provider>
     )
