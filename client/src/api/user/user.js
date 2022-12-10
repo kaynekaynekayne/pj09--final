@@ -67,10 +67,11 @@ export const isUserLoggedIn=async()=>{
     }
 };
 
-export const updateProfile=async({newNickname}={})=>{
+export const updateProfile=async({user, newNickname}={})=>{
+    const userInfo={user, newNickname}
     try{
         const response=await instance.put("/user/update",
-            newNickname,
+            userInfo,
             {
                 headers:{
                     Accept:'application/json',

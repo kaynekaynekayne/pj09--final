@@ -30,7 +30,8 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                localStorage.setItem("ar-user",JSON.stringify(email.split('@')[0]));
+                localStorage.setItem("ar-user",resp.username);
+                // localStorage.setItem("ar-user",email.split('@')[0]);
                 setUser(resp.username);
                 navigate("/");
             } else{

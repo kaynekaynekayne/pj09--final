@@ -8,15 +8,23 @@ const Setting = () => {
     const [newNickname, setNewNickname]=useState(user);
 
     const handleUpdate=async()=>{
-        const resp=await updateProfile({newNickname})
-    }
+        const resp=await updateProfile({user, newNickname});
+        if(resp.statusText==="OK"){
+            console.log(resp);
+        } else{
+            console.log(resp);
+        }
+    };
+
     return (
         <div>
             <h5>안녕, {user}</h5>
             <input 
                 placeholder="새로운 닉네임"
+                value={newNickname}
+                onChange={(e)=>setNewNickname(e.target.value)}
             />
-            <Button name="수정" />
+            <Button name="수정" onClick={handleUpdate}/>
         </div>
     )
 }

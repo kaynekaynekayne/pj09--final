@@ -8,6 +8,7 @@ export const UserContextProvider=({children})=>{
     
     const localUser=localStorage.getItem("ar-user");
     
+    // const [user,setUser]=useState(" ");
     const [user,setUser]=useState(localUser);
 
     useEffect(()=>{
