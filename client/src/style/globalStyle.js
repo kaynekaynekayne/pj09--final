@@ -13,4 +13,14 @@ export const GlobalStyles=createGlobalStyle`
         color:inherit;
         list-style:none;
     }
+
+    ::-webkit-scrollbar{
+    width:0.15rem;
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color: ${(props) => props.theme.secondColor};
+    }
+    ::-webkit-scrollbar-track {
+        background-color: #3c3c3c;
+    } 
 `;

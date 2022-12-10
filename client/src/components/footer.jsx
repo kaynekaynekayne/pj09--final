@@ -46,7 +46,7 @@ const Footer = () => {
 const FooterStyle=styled.footer`
     background-color: ${(props) => props.theme.primaryColor};
     width:100%;
-    min-height:46.4px;
+    min-height:3rem;
 `;  
 
 export default Footer;

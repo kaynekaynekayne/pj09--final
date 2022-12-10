@@ -1,28 +1,54 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useUserContext } from '../context/userContext';
 import styled from 'styled-components';
+import SettingsIcon from '@mui/icons-material/Settings';
+import LoginIcon from '@mui/icons-material/Login';
 
 const Header = () => {
+    const {user}=useUserContext();
 
     return (
-        <HeaderStyle>
-            <Link to="/">
-                <span>around</span>
-            </Link>
-        </HeaderStyle>
+        <NavStyle>
+            <ul>
+                <li>
+                    <Link to="/">around</Link>
+                </li>
+                <li>
+                    {user ? 
+                    <Link to="/setting">
+                        <SettingsIcon fontSize="small"/>
+                    </Link>
+                    : 
+                    <Link to="/login">
+                        <LoginIcon fontSize="small"/>
+                    </Link>
+                    }
+                </li>
+            </ul>
+        </NavStyle>
     );
 };
 
-const HeaderStyle=styled.header`
+const NavStyle=styled.nav`
     width:100%;
-    padding:0.7rem;
+    max-height:3rem;
     background-color: ${(props) => props.theme.primaryColor};
+    padding:0.7rem;
 
-    span{
-        color:white;
+    ul{
+        display:flex;
+        justify-content: space-between;
+        margin:0;
     }
+
     a{
+        color:white;
         text-decoration-line:none;
+    }
+
+    svg{
+        margin:0;
     }
 `;
 

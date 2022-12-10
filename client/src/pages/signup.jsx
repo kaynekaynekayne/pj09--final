@@ -103,12 +103,15 @@ const Signup = () => {
             </FormControl>
             {password && (
                 <FormHelperText>
-                    <span className={lowerCase ? "text-success" : 'text-danger'}
-                        >소문자 포함 </span>
-                    <span className={upperCase ? "text-success" : "text-danger"}
-                        >대문자 포함 </span>
-                    <span className={eightChars ? "text-success" : 'text-danger'}
-                        >여덟자 이상 </span>
+                    <span 
+                        className={lowerCase ? "text-success" : 'text-danger'}
+                    >소문자 포함 </span>
+                    <span 
+                        className={upperCase ? "text-success" : "text-danger"}
+                    >대문자 포함 </span>
+                    <span 
+                        className={eightChars ? "text-success" : 'text-danger'}
+                    >여덟자 이상 </span>
                 </FormHelperText>  
             )}
             <TextField

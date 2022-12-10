@@ -17,6 +17,10 @@ const Btn=styled.button`
     &:focus{
         outline:0
     }
+    &:hover{
+        background-color: ${(props) => props.theme.thirdColor};
+
+    }
 `;
 
 export default Button;
