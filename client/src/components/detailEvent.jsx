@@ -67,10 +67,7 @@ const DetailEvent = ({details}) => {
                             <h6>가격</h6>
                             <span>{pcseguidance}</span>
                         </div>
-                        <div>
-                            <h6>기대평</h6>
-                            <input />
-                        </div>
+
                     </div>
                 </Collapse>
             </div>
@@ -109,7 +106,12 @@ const Section=styled.section`
             font-weight:bold; 
             margin-bottom:0;
         }
-        input{width:80%}
+
+        input{
+            width:80%
+            
+        }
+        
     }
 `;
 
