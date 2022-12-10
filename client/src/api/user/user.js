@@ -52,19 +52,19 @@ export const logout=async()=>{
 };
 
 export const isUserLoggedIn=async()=>{
-    try{
-        const response=await instance.get('/user/user',
-            {
-                withCredentials:true,
-                headers:{
-                    "Authorization":"Bearer "+localStorage.getItem("ar-user")
-                }
-            },
-        )
-        return await response.data;
-    }catch(err){
-        throw new Error("로그인을 하십시오");
-    }
+    const response=await instance.get('/user/user',
+        {
+            withCredentials:true,
+            headers:{
+                "Authorization":"Bearer "+localStorage.getItem("ar-user")
+            }
+        },
+    )
+    return await response.data;
+    // try{
+    // }catch(err){
+    //     throw new Error("로그인을 하십시오");
+    // }
 };
 
 export const updateProfile=async({userEmail, newNickname}={})=>{
