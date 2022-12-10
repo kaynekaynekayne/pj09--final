@@ -18,6 +18,9 @@ export const UserContextProvider=({children})=>{
             setUser(resp.username);
             setUserEmail(resp.email);
         })
+        .catch(err=>{
+            console.log(err);
+        })
         // .catch(err=> {
         //     localStorage.removeItem("ar-user");
         //     setUser(null);
