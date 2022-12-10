@@ -4,11 +4,11 @@ import { updateProfile } from '../api/user/user';
 import Button from '../components/button';
 
 const Setting = () => {
-    const {user}=useUserContext();
+    const {user, userEmail}=useUserContext();
     const [newNickname, setNewNickname]=useState(user);
 
     const handleUpdate=async()=>{
-        const resp=await updateProfile({user, newNickname});
+        const resp=await updateProfile({userEmail, newNickname});
         if(resp.statusText==="OK"){
             console.log(resp);
         } else{

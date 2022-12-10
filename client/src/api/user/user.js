@@ -67,8 +67,8 @@ export const isUserLoggedIn=async()=>{
     }
 };
 
-export const updateProfile=async({user, newNickname}={})=>{
-    const userInfo={user, newNickname}
+export const updateProfile=async({userEmail, newNickname}={})=>{
+    const userInfo={userEmail, newNickname}
     try{
         const response=await instance.put("/user/update",
             userInfo,

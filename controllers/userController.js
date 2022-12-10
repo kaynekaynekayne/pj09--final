@@ -76,23 +76,23 @@ export const isUserLoggedIn=(req,res)=>{
     return res.status(200).json({
         message:"유저가 로그인 되어 있습니다",
         username,
+        email,
     })
 };
 
 export const updateProfile=(req,res)=>{
-    const {user, newNickname}=req.body;
-    console.log(user, newNickname);
-    const thisUser=await User.findOne({username:user});
+    const {userEmail, newNickname}=req.body;
+    const user=await User.findOne({email:userEmail});
     
     const usernameExists=await User.findOne({username:newNickname});
     if(usernameExists){
         return res.status(400).json({error:"이미 사용중인 닉네임입니다"})
     }
 
-    if(thisUser){
-        const {username}=thisUser;
+    if(user){
+        const {username}=user;
         await User.findByIdAndUpdate(
-            thisUser._id,
+            user._id,
             {username:newNickname},
             {new:true}
         );

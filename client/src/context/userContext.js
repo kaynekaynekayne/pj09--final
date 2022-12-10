@@ -10,6 +10,7 @@ export const UserContextProvider=({children})=>{
     
     // const [user,setUser]=useState(" ");
     const [user,setUser]=useState(localUser);
+    const [userEmail, setUserEmail]=useState("");
 
     useEffect(()=>{
         const unsubscribe=isUserLoggedIn()
@@ -33,7 +34,7 @@ export const UserContextProvider=({children})=>{
     },[]);
     
     return(
-        <userContext.Provider value={{user, setUser}}>
+        <userContext.Provider value={{user, setUser, userEmail}}>
             {children}
         </userContext.Provider>
     )
