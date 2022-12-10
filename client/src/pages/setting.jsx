@@ -45,6 +45,7 @@ const Setting = () => {
                 placeholder="새로운 닉네임"
                 value={newNickname}
                 onChange={(e)=>setNewNickname(e.target.value)}
+                maxLength="6"
             />
             <Button name="수정" onClick={handleUpdate}/>
         </Container>
