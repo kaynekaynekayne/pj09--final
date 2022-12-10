@@ -22,13 +22,7 @@ export const UserContextProvider=({children})=>{
             localStorage.removeItem("ar-user");
             setUser(null);
             setUserEmail(null);
-            Swal.fire({
-                icon: 'warning',
-                text: err.message,
-                showConfirmButton:false,
-                width:'20rem',
-                position:'top',
-            })
+            console.log(err.message);
         });
         
         return ()=>unsubscribe;
