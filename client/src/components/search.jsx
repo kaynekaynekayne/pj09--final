@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 import styled from 'styled-components';
+import { useUserContext } from '../context/userContext';
 
 const Search = () => {
     const navigate=useNavigate();
-
+    const {user}=useUserContext();
     const [term, setTerm]=useState("");
     
     const submitHandler=(e)=>{
@@ -17,12 +18,11 @@ const Search = () => {
         <Box>
             <form onSubmit={submitHandler}>
                 <input 
-                    placeholder="공연을 검색하세요 🔍"
+                    placeholder={`${user ? user : "게스트"}님을 위한 공연 검색`}
                     value={term}
                     onChange={(e)=>setTerm(e.target.value)}
                     required
                 />
-                <div></div>
             </form>
         </Box>
     )
@@ -31,16 +31,13 @@ const Search = () => {
 const Box=styled.div`
     margin:2.7rem;
     input{
+        width:13rem;
         border:none;
+        border-bottom: 1px solid lightgray;
         padding:0.2rem;
         &:focus{
             outline:none;
         }
-    }
-    div{
-        width:12rem;
-        margin:0 auto;
-        border-bottom: 1px solid lightgrey;
     }
 `;
 export default Search;

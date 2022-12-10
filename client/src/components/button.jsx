@@ -8,10 +8,9 @@ const Button = ({name, onClick}) => {
 };
 
 const Btn=styled.button`
-    padding:0.7rem;
+    padding:0.75rem;
     cursor:pointer;
     border:none;
-    border-radius:0.4rem;
     color:white;
     background-color: ${(props) => props.theme.secondColor};
     &:focus{

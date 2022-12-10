@@ -22,7 +22,7 @@ export const UserContextProvider=({children})=>{
             localStorage.removeItem("ar-user");
             setUser(null);
             setUserEmail(null);
-            console.log(err.message);
+            console.log(err);
         });
         
         return ()=>unsubscribe;
