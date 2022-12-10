@@ -39,6 +39,7 @@ const NavStyle=styled.nav`
     ul{
         display:flex;
         justify-content: space-between;
+        align-items:center;
         margin:0;
     }
 
@@ -49,6 +50,8 @@ const NavStyle=styled.nav`
 
     svg{
         margin:0;
+        height:100%;
+        /* vertical-align: middle; */
     }
 `;
 
