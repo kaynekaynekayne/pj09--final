@@ -80,7 +80,7 @@ export const isUserLoggedIn=(req,res)=>{
     })
 };
 
-export const updateProfile=(req,res)=>{
+export const updateProfile=async(req,res)=>{
     const {userEmail, newNickname}=req.body;
     const user=await User.findOne({email:userEmail});
     
