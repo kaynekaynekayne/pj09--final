@@ -21,7 +21,6 @@ const Setting = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                // 
                 localStorage.setItem("ar-user",newNickname);
                 setUser(newNickname);
             } else{

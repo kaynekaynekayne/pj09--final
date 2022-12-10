@@ -8,7 +8,6 @@ export const UserContextProvider=({children})=>{
     
     const localUser=localStorage.getItem("ar-user");
     
-    // const [user,setUser]=useState(" ");
     const [user,setUser]=useState(localUser);
     const [userEmail, setUserEmail]=useState("");
 
@@ -21,12 +20,6 @@ export const UserContextProvider=({children})=>{
         .catch(err=>{
             console.log(err);
         })
-        // .catch(err=> {
-        //     localStorage.removeItem("ar-user");
-        //     setUser(null);
-        //     setUserEmail(null);
-        //     console.log(err);
-        // });
         
         return ()=>unsubscribe;
         

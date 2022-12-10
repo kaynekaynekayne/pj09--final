@@ -16,7 +16,6 @@ const Pages = () => {
             <Route 
                 path="/" 
                 element={<Home />}
-                // element={user ? <Home /> : <Navigate to="/login" />}
             />
             <Route 
                 path="/login" 
@@ -29,12 +28,10 @@ const Pages = () => {
             <Route 
                 path="/searched/:word"
                 element={<Searched />}
-                // element={user ? <Searched /> : <Navigate to="/login" />}
             />
             <Route 
                 path="/detail/:id" 
                 element={<Detail />}
-                // element={user ? <Detail /> : <Navigate to="/login" />}
             />
             <Route 
                 path="/setting"
