@@ -21,7 +21,7 @@ const Spinner=styled.div`
     width:2rem;
     height:2rem;
     border-radius:50%;
-    border:0.4rem solid skyblue;
+    border:0.4rem solid ${(props) => props.theme.primaryColor};
     border-top:0.4rem solid whitesmoke;
     animation:spin 0.5s linear infinite;
 
