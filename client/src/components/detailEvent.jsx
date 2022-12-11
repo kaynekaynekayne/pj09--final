@@ -46,13 +46,13 @@ const DetailEvent = ({details}) => {
                             <span>{genrenm}</span>
                         </div>
                         <div>
-                            <h6>공연기간</h6>
+                            <h6>기간</h6>
                             <span>
                                 {trimFullYear(prfpdfrom)}-{trimFullYear(prfpdto)} ({prfstate})
                             </span>
                         </div>
                         <div>
-                            <h6>공연시간</h6>
+                            <h6>시간</h6>
                             <span>{prfruntime}</span>
                         </div>
                         <div>
@@ -86,6 +86,7 @@ const Section=styled.section`
         border-radius:0.8rem;
         img{
             max-height:28rem;
+            max-width:100%;
             object-fit:contain;
         }
         h4{

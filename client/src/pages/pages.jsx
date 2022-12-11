@@ -5,8 +5,8 @@ import Detail from './detail';
 import Searched from './searched';
 import Login from './login';
 import Signup from './signup';
-import { useUserContext } from '../context/userContext';
 import Setting from './setting';
+import { useUserContext } from '../context/userContext';
 
 const Pages = () => {
     const {user}=useUserContext();

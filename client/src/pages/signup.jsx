@@ -144,7 +144,7 @@ const Container=styled.div`
     display: flex;
     flex-direction: column;
     justify-content:center;
-    padding:0 30%;
+    padding:0 35%;
 
     .box{
         margin-top:2rem;

@@ -42,6 +42,7 @@ const Setting = () => {
                 onChange={(e)=>setNewNickname(e.target.value)}
                 maxLength="6"
                 minLength="1"
+                required
             />
             <Button name="수정" onClick={handleUpdate}/>
         </Container>

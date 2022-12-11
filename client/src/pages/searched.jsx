@@ -60,7 +60,7 @@ const CardContainer=styled.div`
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
     grid-gap:2rem;
-    margin:2rem;
+    margin:2.5rem;
 `;
 
 export default Searched;

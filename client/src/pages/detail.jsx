@@ -66,6 +66,7 @@ const Detail = () => {
 const Box=styled.div`
     display: flex;
     flex: 1;
+    margin:2.5rem;
 
     @media screen and (max-width:768px){
         flex-direction: column;
