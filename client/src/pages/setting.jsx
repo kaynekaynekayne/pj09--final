@@ -12,6 +12,7 @@ const Setting = () => {
     const handleUpdate=async()=>{
         
         const resp=await updateProfile({userEmail, newNickname});
+        console.log(resp);
         
         if(resp.statusText==="OK"){
             Swal.fire({
@@ -41,6 +42,7 @@ const Setting = () => {
                 value={newNickname}
                 onChange={(e)=>setNewNickname(e.target.value)}
                 maxLength="6"
+                minLength="1"
             />
             <Button name="수정" onClick={handleUpdate}/>
         </Container>
