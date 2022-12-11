@@ -11,7 +11,6 @@ const Footer = () => {
 
     const handleLogout=async()=>{
         const resp=await logout();
-        console.log(resp);
 
         if(resp.statusText==="OK"){
             localStorage.removeItem("ar-user");

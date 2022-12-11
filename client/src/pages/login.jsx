@@ -13,7 +13,7 @@ import styled from 'styled-components';
 
 const Login = () => {
     const navigate=useNavigate();
-    const {setUser}=useUserContext();
+    const {setUser, setUserEmail}=useUserContext();
 
     const [email,setEmail]=useState("");
     const [password, setPassword]=useState("");
@@ -22,7 +22,6 @@ const Login = () => {
     const handleLogin=async()=>{
 
         const resp=await login({email, password});
-        console.log(resp);
 
         if(resp.statusText==="OK"){
             Swal.fire({
@@ -33,6 +32,7 @@ const Login = () => {
             });
             localStorage.setItem("ar-user",resp.data.username);
             setUser(resp.data.username);
+            setUserEmail(email);
             navigate("/");
         } else{
             Swal.fire({

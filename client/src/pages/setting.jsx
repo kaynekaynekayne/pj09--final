@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {useUserContext} from '../context/userContext';
 import { updateProfile } from '../api/user/user';
 import Button from '../components/button';
@@ -8,11 +8,10 @@ import styled from 'styled-components';
 const Setting = () => {
     const {user, setUser, userEmail}=useUserContext();
     const [newNickname, setNewNickname]=useState("");
-
+    
     const handleUpdate=async()=>{
         
-        const resp=await updateProfile({userEmail, newNickname});
-        console.log(resp);
+        const resp=userEmail && await updateProfile({userEmail, newNickname});
         
         if(resp.statusText==="OK"){
             Swal.fire({

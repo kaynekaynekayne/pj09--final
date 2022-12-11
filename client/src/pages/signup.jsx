@@ -27,7 +27,6 @@ const Signup = () => {
     const handleSignup=async()=>{
 
         const resp=await signup({email,username,password,confirmPassword});
-        console.log(resp);
     
         if(resp.status===201){
             Swal.fire({
