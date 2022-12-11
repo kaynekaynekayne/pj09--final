@@ -24,32 +24,23 @@ const Signup = () => {
     
     const navigate=useNavigate();
     
-    const handleSignup=async(e)=>{
-        e.preventDefault();
+    const handleSignup=async()=>{
 
-        try{
-            const resp=await signup({email,username,password,confirmPassword});
-            if(!resp.error){
-                Swal.fire({
-                    icon: 'success',
-                    text: resp.message,
-                    showConfirmButton: false,
-                    timer: 1500
-                })
-                navigate("/login");
-            } else{
-                Swal.fire({
-                    icon: 'error',
-                    text: resp.error,
-                    showConfirmButton:false,
-                    width:'20rem',
-                    position:'top',
-                })
-            }
-        }catch(err){
+        const resp=await signup({email,username,password,confirmPassword});
+        console.log(resp);
+    
+        if(resp.status===201){
             Swal.fire({
-                icon:"error",
-                text: err.message,
+                icon: 'success',
+                text: resp.data.message,
+                showConfirmButton: false,
+                timer: 1500
+            })
+            navigate("/login");
+        } else{
+            Swal.fire({
+                icon: 'error',
+                text: resp.response.data.error || resp,
                 showConfirmButton:false,
                 width:'20rem',
                 position:'top',

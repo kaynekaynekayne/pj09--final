@@ -12,10 +12,10 @@ export const signup=async({username, email, password, confirmPassword}={})=>{
                 }
             }
         ) 
-        return await response.data;
+        return response;
 
     }catch(err){
-        throw new Error(err.response.data.error)
+        return err;
     }
 };
 
@@ -35,7 +35,6 @@ export const login=async({email, password}={})=>{
         return response;
     }catch(err){
         return err;
-        // throw new Error(err.response.data.error)
     }
 };
 
@@ -46,9 +45,9 @@ export const logout=async()=>{
                 withCredentials:true,
             }
         )
-        return await response.data;
+        return response;
     }catch(err){
-        console.log(err.response.data.error);
+        return err;
     }
 };
 

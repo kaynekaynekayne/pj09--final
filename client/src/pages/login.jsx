@@ -19,8 +19,8 @@ const Login = () => {
     const [password, setPassword]=useState("");
     const [showPassword, setShowPassword]=useState(false);
 
-    const handleLogin=async(e)=>{
-        // e.preventDefault();
+    const handleLogin=async()=>{
+
         const resp=await login({email, password});
         console.log(resp);
 
@@ -37,22 +37,12 @@ const Login = () => {
         } else{
             Swal.fire({
                 icon: 'error',
-                text: resp.response.data.error,
+                text: resp.response.data.error || resp,
                 showConfirmButton:false,
                 width:'20rem',
                 position:'top',
             })
         }
-        // try{
-        // }catch(err){
-        //     Swal.fire({
-        //         icon:"error",
-        //         text: err.message,
-        //         showConfirmButton:false,
-        //         width:'20rem',
-        //         position:'top',
-        //     })
-        // }
     };
 
     return (
