@@ -20,37 +20,39 @@ const Login = () => {
     const [showPassword, setShowPassword]=useState(false);
 
     const handleLogin=async(e)=>{
-        e.preventDefault();
-        try{
-            const resp=await login({email, password});
-            if(!resp.error){
-                Swal.fire({
-                    icon: 'success',
-                    text: resp.message,
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-                localStorage.setItem("ar-user",resp.username);
-                setUser(resp.username);
-                navigate("/");
-            } else{
-                Swal.fire({
-                    icon: 'error',
-                    text: resp.error,
-                    showConfirmButton:false,
-                    width:'20rem',
-                    position:'top',
-                })
-            }
-        }catch(err){
+        // e.preventDefault();
+        const resp=await login({email, password});
+        console.log(resp);
+
+        if(resp.statusText==="OK"){
             Swal.fire({
-                icon:"error",
-                text: err.message,
+                icon: 'success',
+                text: resp.data.message,
+                showConfirmButton: false,
+                timer: 1500
+            });
+            localStorage.setItem("ar-user",resp.username);
+            setUser(resp.username);
+            navigate("/");
+        } else{
+            Swal.fire({
+                icon: 'error',
+                text: resp.response.data.error,
                 showConfirmButton:false,
                 width:'20rem',
                 position:'top',
             })
         }
+        // try{
+        // }catch(err){
+        //     Swal.fire({
+        //         icon:"error",
+        //         text: err.message,
+        //         showConfirmButton:false,
+        //         width:'20rem',
+        //         position:'top',
+        //     })
+        // }
     };
 
     return (

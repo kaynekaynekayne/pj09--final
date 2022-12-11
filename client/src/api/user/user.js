@@ -32,9 +32,10 @@ export const login=async({email, password}={})=>{
                 }
             }
         )
-        return await response.data;
+        return response;
     }catch(err){
-        throw new Error(err.response.data.error)
+        return err;
+        // throw new Error(err.response.data.error)
     }
 };
 
@@ -56,9 +57,6 @@ export const isUserLoggedIn=async()=>{
         const response=await instance.get('/user/user',
             {
                 withCredentials:true,
-                // headers:{
-                //     "Authorization":"Bearer "+localStorage.getItem("ar-user")
-                // }
             },
         )
         return await response.data;

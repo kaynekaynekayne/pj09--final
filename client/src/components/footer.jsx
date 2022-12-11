@@ -13,25 +13,25 @@ const Footer = () => {
     const handleLogout=async()=>{
         const resp=await logout();
         if(!resp.error){
-            Swal.fire({
-                icon: 'success',
-                text: resp.message,
-                showConfirmButton: false,
-                timer: 1500
-            })
+            // Swal.fire({
+            //     icon: 'success',
+            //     text: resp.message,
+            //     showConfirmButton: false,
+            //     timer: 1500
+            // })
             localStorage.removeItem("ar-user");
             setUser(null);
             setUserEmail(null);
             navigate("/login");
         } else{
             console.log(resp);
-            Swal.fire({
-                icon: 'error',
-                text: resp.error,
-                showConfirmButton:false,
-                width:'20rem',
-                position:'top',
-            })
+            // Swal.fire({
+            //     icon: 'error',
+            //     text: resp.error,
+            //     showConfirmButton:false,
+            //     width:'20rem',
+            //     position:'top',
+            // })
         }
     }
 

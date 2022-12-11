@@ -10,30 +10,26 @@ const Setting = () => {
     const [newNickname, setNewNickname]=useState("");
 
     const handleUpdate=async()=>{
-        try{
-            const resp=await updateProfile({userEmail, newNickname});
-            
-            console.log(resp);  
-            if(!resp.error){
-                Swal.fire({
-                    icon: 'success',
-                    text: resp.data.msg,
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-                localStorage.setItem("ar-user",newNickname);
-                setUser(newNickname);
-            } else{
-                Swal.fire({
-                    icon: 'error',
-                    text: resp.response.data.error,
-                    showConfirmButton:false,
-                    width:'20rem',
-                    position:'top',
-                })
-            }    
-        }catch(err){
-            console.log(err);
+        
+        const resp=await updateProfile({userEmail, newNickname});
+        
+        if(resp.statusText==="OK"){
+            Swal.fire({
+                icon: 'success',
+                text: resp.data.msg,
+                showConfirmButton: false,
+                timer: 1500
+            });
+            localStorage.setItem("ar-user",newNickname);
+            setUser(newNickname);
+        } else{
+            Swal.fire({
+                icon: 'warning',
+                text: resp.response.data.error || resp,
+                showConfirmButton:false,
+                width:'20rem',
+                position:'top',
+            })
         }
     };
 
