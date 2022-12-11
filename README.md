@@ -58,8 +58,10 @@
   
 ### 공연 상세 정보  
   
-![detail-info](https://user-images.githubusercontent.com/96046698/201513397-c4916121-1cb4-4191-a5e1-bd5874623a7b.gif)  
+![gif-ar-event](https://user-images.githubusercontent.com/96046698/206911978-9473226d-cb45-478c-a393-c4f60e536b83.gif)  
  
 
 ### 공연장까지 길찾기  
-![detail-map2](https://user-images.githubusercontent.com/96046698/201513401-51990fc1-f7d8-455f-bc6f-098ab9bb0f86.gif)  
+![gif-ar-map](https://user-images.githubusercontent.com/96046698/206911981-c93aa206-2cee-4ac3-a737-235463c914cb.gif)  
+ 
+
