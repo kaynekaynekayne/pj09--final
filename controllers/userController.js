@@ -60,7 +60,7 @@ export const login=async(req,res)=>{
         secure:true,
     });
     const {username}=user;
-    return res.status(201).json({
+    return res.status(200).json({
         message:"성공적인 로그인",
         username,
     });
