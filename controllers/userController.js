@@ -90,7 +90,6 @@ export const updateProfile=async(req,res)=>{
     }
 
     if(user){
-        const {username}=user;
         await User.findByIdAndUpdate(
             user._id,
             {username:newNickname},
