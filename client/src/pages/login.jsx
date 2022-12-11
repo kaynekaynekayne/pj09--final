@@ -27,12 +27,12 @@ const Login = () => {
         if(resp.statusText==="OK"){
             Swal.fire({
                 icon: 'success',
-                text: resp.message,
+                text: resp.data.message,
                 showConfirmButton: false,
                 timer: 1500
             });
-            localStorage.setItem("ar-user",resp.username);
-            setUser(resp.username);
+            localStorage.setItem("ar-user",resp.data.username);
+            setUser(resp.data.username);
             navigate("/");
         } else{
             Swal.fire({
