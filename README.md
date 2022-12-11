@@ -37,23 +37,23 @@
 ## 미리보기
 ### 홈 화면  
   
-![arhome](https://user-images.githubusercontent.com/96046698/206897479-9ca4e914-930a-49b9-87f4-74218a453a36.png)  
+![ar-home](https://user-images.githubusercontent.com/96046698/206911032-07ba1e31-5b94-4932-ad51-6b8de616b739.png)    
 
 ### 회원가입  
   
-![arsignup](https://user-images.githubusercontent.com/96046698/206897553-75ee82f6-a025-4b98-a9c9-f722897978ea.png)  
+![ar-signup](https://user-images.githubusercontent.com/96046698/206911037-f47489ab-d6ee-41ee-a819-6705cf509bd0.png)   
 
 ### 로그인  
   
-![arlogin](https://user-images.githubusercontent.com/96046698/206897613-3c540a66-3453-43a3-bfc2-489d7e68c9b5.png)  
+![ar-login](https://user-images.githubusercontent.com/96046698/206911034-3659b3ce-4313-44ac-952f-2b82896e099c.png)  
 
 ### 검색  
   
-![arsearch](https://user-images.githubusercontent.com/96046698/206897753-20654337-8cf7-4578-ad7b-0b614be4518b.png)    
+![ar-search](https://user-images.githubusercontent.com/96046698/206911036-bd2247b9-b8a2-4b9f-be2d-dba109f0cce1.png)  
 
 ### 상세 페이지  
   
-![ardetail](https://user-images.githubusercontent.com/96046698/206897836-ec4e5254-7f8f-4c78-a7fa-39c7a13ebeec.png)    
+![ar-detail](https://user-images.githubusercontent.com/96046698/206911028-5491a83f-35da-46d9-8149-ef872217bda5.png)  
 
   
 ### 공연 상세 정보  
