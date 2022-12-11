@@ -50,7 +50,7 @@ const Setting = () => {
 };
 
 const Container=styled.div`
-    padding:3rem;
+    padding:5rem;
 
     input{
         padding:0.7rem;
