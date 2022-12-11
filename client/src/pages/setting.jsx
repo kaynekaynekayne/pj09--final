@@ -11,7 +11,7 @@ const Setting = () => {
     
     const handleUpdate=async()=>{
         
-        const resp=userEmail && await updateProfile({userEmail, newNickname});
+        const resp=await updateProfile({userEmail, newNickname});
         
         if(resp.statusText==="OK"){
             Swal.fire({
