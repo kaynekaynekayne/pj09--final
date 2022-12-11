@@ -64,4 +64,6 @@
 ### 공연장까지 길찾기  
 ![gif-ar-map](https://user-images.githubusercontent.com/96046698/206911981-c93aa206-2cee-4ac3-a737-235463c914cb.gif)  
  
-
+### 닉네임 수정    
+![gif-ar-nickname](https://user-images.githubusercontent.com/96046698/206913936-1933a7b7-ef09-4221-a5d3-9a7c88d16593.gif)  
+ 
