@@ -32,7 +32,7 @@ export const login=async({email, password}={})=>{
                 }
             }
         )
-        return response;
+        return response.data;
     }catch(err){
         return err;
     }

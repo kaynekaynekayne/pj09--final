@@ -27,7 +27,7 @@ const Login = () => {
         if(resp.statusText==="OK"){
             Swal.fire({
                 icon: 'success',
-                text: resp.data.message,
+                text: resp.message,
                 showConfirmButton: false,
                 timer: 1500
             });
