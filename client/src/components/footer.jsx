@@ -1,5 +1,4 @@
 import React from 'react';
-import Swal from 'sweetalert2'
 import {logout} from '../api/user/user';
 import { useNavigate } from 'react-router-dom';
 import {useUserContext} from '../context/userContext';
@@ -12,26 +11,15 @@ const Footer = () => {
 
     const handleLogout=async()=>{
         const resp=await logout();
-        if(!resp.error){
-            // Swal.fire({
-            //     icon: 'success',
-            //     text: resp.message,
-            //     showConfirmButton: false,
-            //     timer: 1500
-            // })
+        console.log(resp);
+
+        if(resp.statusText==="OK"){
             localStorage.removeItem("ar-user");
             setUser(null);
             setUserEmail(null);
             navigate("/login");
         } else{
             console.log(resp);
-            // Swal.fire({
-            //     icon: 'error',
-            //     text: resp.error,
-            //     showConfirmButton:false,
-            //     width:'20rem',
-            //     position:'top',
-            // })
         }
     }
 
