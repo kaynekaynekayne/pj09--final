@@ -48,11 +48,11 @@
 
 ### 검색  
   
-![searching](https://user-images.githubusercontent.com/96046698/201461990-db71fc73-0d67-401e-8eed-53448c8196c2.png)  
+![arsearch](https://user-images.githubusercontent.com/96046698/206897753-20654337-8cf7-4578-ad7b-0b614be4518b.png)    
 
 ### 상세 페이지  
   
-![searched](https://user-images.githubusercontent.com/96046698/201462041-705f363a-0f8d-40b3-aa7e-4e58877cdfb3.png)  
+![ardetail](https://user-images.githubusercontent.com/96046698/206897836-ec4e5254-7f8f-4c78-a7fa-39c7a13ebeec.png)    
 
   
 ### 공연 상세 정보  
