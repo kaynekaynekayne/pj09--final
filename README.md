@@ -1,7 +1,7 @@
 # [Around](https://howcanigothere.herokuapp.com/)
 
 ## 프로젝트 소개
-**공연을 예매한 후 공연장까지 어떻게 가는지 찾아볼 때 마다 포털에 공연명 검색→공연장 확인→지도 웹사이트 접속→길찾기의 순서를 통해서 검색해야 하는 불편함이 있었습니다. 공연명만을 입력해도 바로 지도에 장소가 표시되고 길찾기 서비스를 쉽게 이용할 수 있는 플랫폼을 구현하였습니다.**
+**공연을 예매한 후 공연장까지 어떻게 가는지 찾아볼 때 마다, 포털에 공연명 검색→공연장 확인→지도 웹사이트 접속→길찾기의 순서로 검색해야 하는 불편함이 있었습니다. 공연명만을 입력해도 바로 지도에 장소가 표시되고 길찾기 서비스를 쉽게 이용할 수 있는 플랫폼을 구현하였습니다.**
 
 ## 구현 기능
 - 로그인  
@@ -37,29 +37,33 @@
 ## 미리보기
 ### 홈 화면  
   
-![arhome](https://user-images.githubusercontent.com/96046698/206897479-9ca4e914-930a-49b9-87f4-74218a453a36.png)  
+![ar-home](https://user-images.githubusercontent.com/96046698/206911032-07ba1e31-5b94-4932-ad51-6b8de616b739.png)    
 
 ### 회원가입  
   
-![arsignup](https://user-images.githubusercontent.com/96046698/206897553-75ee82f6-a025-4b98-a9c9-f722897978ea.png)  
+![ar-signup](https://user-images.githubusercontent.com/96046698/206911037-f47489ab-d6ee-41ee-a819-6705cf509bd0.png)   
 
 ### 로그인  
   
-![arlogin](https://user-images.githubusercontent.com/96046698/206897613-3c540a66-3453-43a3-bfc2-489d7e68c9b5.png)  
+![ar-login](https://user-images.githubusercontent.com/96046698/206911034-3659b3ce-4313-44ac-952f-2b82896e099c.png)  
 
 ### 검색  
   
-![arsearch](https://user-images.githubusercontent.com/96046698/206897753-20654337-8cf7-4578-ad7b-0b614be4518b.png)    
+![ar-search](https://user-images.githubusercontent.com/96046698/206911036-bd2247b9-b8a2-4b9f-be2d-dba109f0cce1.png)  
 
 ### 상세 페이지  
   
-![ardetail](https://user-images.githubusercontent.com/96046698/206897836-ec4e5254-7f8f-4c78-a7fa-39c7a13ebeec.png)    
+![ar-detail](https://user-images.githubusercontent.com/96046698/206911028-5491a83f-35da-46d9-8149-ef872217bda5.png)  
 
   
 ### 공연 상세 정보  
   
-![detail-info](https://user-images.githubusercontent.com/96046698/201513397-c4916121-1cb4-4191-a5e1-bd5874623a7b.gif)  
+![gif-ar-event](https://user-images.githubusercontent.com/96046698/206911978-9473226d-cb45-478c-a393-c4f60e536b83.gif)  
  
 
 ### 공연장까지 길찾기  
-![detail-map2](https://user-images.githubusercontent.com/96046698/201513401-51990fc1-f7d8-455f-bc6f-098ab9bb0f86.gif)  
+![gif-ar-map](https://user-images.githubusercontent.com/96046698/206911981-c93aa206-2cee-4ac3-a737-235463c914cb.gif)  
+ 
+### 닉네임 수정  
+![gif-ar-username](https://user-images.githubusercontent.com/96046698/206914566-bd3efce5-851f-46c8-a446-70649a834165.gif)  
+ 
