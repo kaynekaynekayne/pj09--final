@@ -51,7 +51,6 @@ const NavStyle=styled.nav`
     svg{
         margin:0;
         height:100%;
-        /* vertical-align: middle; */
     }
 `;
 
